@@ -6,7 +6,7 @@ p_formulaId CHAR(36),
 p_feasible BOOLEAN,
 p_cost NUMERIC(10,3),
 p_currencyCode CHAR(6),
-p_timestamp INT
+p_timestamp BIGINT
 )
 BEGIN
 INSERT INTO worldofrations.formulations (`id`,`formulaId`, `feasible`, `cost`, `currencyCode`, `timestamp`)

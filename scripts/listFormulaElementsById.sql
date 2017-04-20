@@ -1,6 +1,6 @@
 DELIMITER //
 
-CREATE PROCEDURE listElementsForFormula (
+CREATE PROCEDURE listFormulaElementsById (
 p_formulaId CHAR(36))
 Begin
 SELECT 

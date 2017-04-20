@@ -1,11 +1,10 @@
 DELIMITER //
 
-CREATE PROCEDURE listFormulationFeedstuffByFormulationId ( 
+CREATE PROCEDURE listFormulationFeedstuffsById ( 
 p_formulationId CHAR(36))
 BEGIN
 SELECT 
-p_formulationId AS `formulationId`,
-`feedstuffId` AS `feedstuffId`,
+`feedstuffId` AS `id`,
 `feedstuffs`.`name` AS `name`,
 `minimum` AS `minimum`,
 `maximum` AS `maximum`,
@@ -17,8 +16,7 @@ ON `formulationFeedstuffs`.`feedstuffId` = `feedstuffs`.`id`
 AND `formulationFeedstuffs`.`formulationId` = p_formulationId
 UNION 
 SELECT 
-p_formulationId AS `formulationId`,
-`feedstuffId` AS `feedstuffId`,
+`feedstuffId` AS `id`,
 `userFeedstuffs`.`name` AS `name`,
 `minimum` AS `minimum`,
 `maximum` AS `maximum`,
