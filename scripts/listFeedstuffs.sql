@@ -3,8 +3,8 @@ DELIMITER //
 CREATE PROCEDURE listFeedstuffs()
 BEGIN
 SELECT 
-`id` AS `id`,
-`name` AS `name`,
+`feedstuff`.`id` AS `id`,
+`feedstuff`.`name` AS `name`,
 `feedstuffGroup1`.`id` AS `groupId`,
 CASE
 	WHEN `feedstuffGroup3`.`name` IS NULL
