@@ -1,6 +1,6 @@
 DELIMITER //
 
-CREATE PROCEDURE updateLastLoginTimestamp ( 
+CREATE PROCEDURE updateUser ( 
 p_username CHAR(128),
 p_lastLoginTimestamp  BIGINT
 )

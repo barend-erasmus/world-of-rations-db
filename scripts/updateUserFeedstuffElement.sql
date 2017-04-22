@@ -1,6 +1,6 @@
 DELIMITER //
 
-CREATE PROCEDURE updateUserFeedstuffMeasurement ( 
+CREATE PROCEDURE updateUserFeedstuffElement ( 
 p_feedstuffId CHAR(36),
 p_elementId CHAR(36),
 p_value  DECIMAL(20, 5)
