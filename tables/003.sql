@@ -4222,3 +4222,35 @@ VALUES
 'N/A',
 88
 ); 
+INSERT INTO worldofrations.feedstuffs
+(
+`id`,
+`groupId`,
+`name`,
+`description`,
+`sortOrder`
+)
+VALUES
+(
+'5c6e639c-5527-4ab8-b939-c94d83e73b35',
+'F46503DE-69F2-49D0-8601-7C332E0471FF',
+'S, as Flowers Sulphur (S)',
+'N/A',
+240
+); 
+INSERT INTO worldofrations.feedstuffs
+(
+`id`,
+`groupId`,
+`name`,
+`description`,
+`sortOrder`
+)
+VALUES
+(
+'f57ccc76-6e1b-417a-93f7-e4720daf0f5e',
+'F46503DE-69F2-49D0-8601-7C332E0471FF',
+'S, as Ammonium Sulphate ((NH4)2SO4)',
+'N/A',
+240
+); 

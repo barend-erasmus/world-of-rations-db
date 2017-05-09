@@ -246694,3 +246694,63 @@ VALUES
 '8202DFF0-8CEC-4289-9AD3-41A53B47F6D3',
 30
 ); 
+INSERT INTO worldofrations.feedstuffMeasurements
+(
+`feedstuffId`,
+`elementId`,
+`value`
+)
+VALUES
+(
+'5c6e639c-5527-4ab8-b939-c94d83e73b35',
+'06682B1B-B905-4D48-B837-F3AA6F0B4897',
+100
+);
+INSERT INTO worldofrations.feedstuffMeasurements
+(
+`feedstuffId`,
+`elementId`,
+`value`
+)
+VALUES
+(
+'f57ccc76-6e1b-417a-93f7-e4720daf0f5e',
+'06682B1B-B905-4D48-B837-F3AA6F0B4897',
+100
+);
+INSERT INTO worldofrations.feedstuffMeasurements
+(
+`feedstuffId`,
+`elementId`,
+`value`
+)
+VALUES
+(
+'5c6e639c-5527-4ab8-b939-c94d83e73b35',
+'C76338A9-E011-45AF-A1E4-9A52D166F880',
+100
+);
+INSERT INTO worldofrations.feedstuffMeasurements
+(
+`feedstuffId`,
+`elementId`,
+`value`
+)
+VALUES
+(
+'f57ccc76-6e1b-417a-93f7-e4720daf0f5e',
+'C76338A9-E011-45AF-A1E4-9A52D166F880',
+24.1
+); 
+INSERT INTO worldofrations.feedstuffMeasurements
+(
+`feedstuffId`,
+`elementId`,
+`value`
+)
+VALUES
+(
+'f57ccc76-6e1b-417a-93f7-e4720daf0f5e',
+'CF7FD851-DFC0-4680-96D3-00F9DBC9469C',
+134.1
+); 
