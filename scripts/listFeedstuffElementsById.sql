@@ -7,6 +7,7 @@ SELECT
 `measurement`.`elementId` AS `id`,
 `element`.`name` AS `name`,
 `element`.`unit` AS `unit`,
+`element`.`code` AS `code`,
 `measurement`.`value` AS `value`,
 `element`.`sortOrder` AS `sortOrder`
 FROM worldofrations.feedstuffMeasurements AS `measurement`
@@ -19,6 +20,7 @@ SELECT
 `measurement`.`elementId` AS `id`,
 `element`.`name` AS `name`,
 `element`.`unit` AS `unit`,
+`element`.`code` AS `code`,
 `measurement`.`value` AS `value`,
 `element`.`sortOrder` AS `sortOrder`
 FROM worldofrations.userFeedstuffMeasurements AS `measurement`
