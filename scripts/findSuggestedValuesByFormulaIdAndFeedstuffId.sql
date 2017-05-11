@@ -17,12 +17,16 @@ LEFT JOIN worldofrations.formulaGroups AS `formulaGroup2`
 ON `formulaGroup2`.`parentGroupId` = `formulaGroup1`.`id` 
 LEFT JOIN worldofrations.formulaGroups AS `formulaGroup3`
 ON `formulaGroup3`.`parentGroupId` = `formulaGroup2`.`id`
+LEFT JOIN worldofrations.formulaGroups AS `formulaGroup4`
+ON `formulaGroup4`.`parentGroupId` = `formulaGroup3`.`id`
 WHERE
 `formulaGroup1`.`Id` = `formula`.`groupId`
 OR
 `formulaGroup2`.`Id` = `formula`.`groupId`
 OR
-`formulaGroup3`.`Id` = `formula`.`groupId`;
+`formulaGroup3`.`Id` = `formula`.`groupId`
+OR
+`formulaGroup4`.`Id` = `formula`.`groupId`;
 END;
 //
 
