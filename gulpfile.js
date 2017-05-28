@@ -23,7 +23,7 @@ gulp.task('publish:source:tables', function () {
     });
 
     return gulp
-        .src(['./tables'])
+        .src(['./tables/**'])
         .pipe(gulpSSH.dest(argv.dest));
 });
 
@@ -41,7 +41,7 @@ gulp.task('publish:source:scripts', function () {
     });
 
     return gulp
-        .src(['./scripts'])
+        .src(['./scripts/**'])
         .pipe(gulpSSH.dest(argv.dest));
 });
 
