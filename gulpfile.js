@@ -93,7 +93,7 @@ gulp.task('docker:build', function (done) {
         password: argv.password
     }).then(function () {
         ssh.execCommand(`docker build -t ${argv.service} /docker-uploads/${argv.service}`).then(function (result) {
-            return ssh.execCommand(`docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=worldofrations -e MYSQL_USER=worldofrations_user -e MYSQL_PASSWORD=worldofrations_password -t ${argv.service}`);
+            return ssh.execCommand(`docker run -d -p 3306:3306 --name ${argv.service} -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=worldofrations -e MYSQL_USER=worldofrations_user -e MYSQL_PASSWORD=worldofrations_password -t ${argv.service}`);
         }).then(function (result) {
             ssh.dispose();
             done();
