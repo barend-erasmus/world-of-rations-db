@@ -24,7 +24,7 @@ gulp.task('publish:source:tables', function () {
 
     return gulp
         .src(['./tables/**'])
-        .pipe(gulpSSH.dest(`/opt/${argv.service}/tables`));
+        .pipe(gulpSSH.dest(`/docker-uploads/${argv.service}/tables`));
 });
 
 gulp.task('publish:source:scripts', function () {
@@ -42,7 +42,7 @@ gulp.task('publish:source:scripts', function () {
 
     return gulp
         .src(['./scripts/**'])
-        .pipe(gulpSSH.dest(`/opt/${argv.service}/scripts`));
+        .pipe(gulpSSH.dest(`/docker-uploads/${argv.service}/scripts`));
 });
 
 gulp.task('publish:dockerfile', function () {
