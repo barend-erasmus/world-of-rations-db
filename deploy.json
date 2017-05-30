@@ -1,0 +1,29 @@
+{
+    "machine": {
+        "host": "$host",
+        "username": "$username",
+        "password": "$password"
+    },
+    "commands": [
+        "docker stop world-of-rations-db",
+        "docker rm world-of-rations-db",
+        "docker build -t world-of-rations-db /docker-uploads/world-of-rations-db",
+        "docker run -d -p 3306:3306 --name world-of-rations-db -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=worldofrations -e MYSQL_USER=worldofrations_user -e MYSQL_PASSWORD=worldofrations_password -t world-of-rations-db"
+    ],
+    "directories": [
+        {
+            "source": "$workspace/scripts",
+            "destination": "/docker-uploads/world-of-rations-db/scripts"
+        },
+        {
+            "source": "$workspace/tables",
+            "destination": "/docker-uploads/world-of-rations-db/tables"
+        }
+    ],
+    "files": [
+        {
+            "source": "$workspace/Dockerfile",
+            "destination": "/docker-uploads/world-of-rations-service/Dockerfile"
+        }
+    ]
+}
