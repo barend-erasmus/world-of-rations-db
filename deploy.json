@@ -23,7 +23,7 @@
     "files": [
         {
             "source": "$workspace/Dockerfile",
-            "destination": "/docker-uploads/world-of-rations-service/Dockerfile"
+            "destination": "/docker-uploads/world-of-rations-db/Dockerfile"
         }
     ]
 }
