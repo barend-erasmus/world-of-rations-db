@@ -198,6 +198,34 @@ SELECT `id`, `name`, LOWER(`name`), 2500, 0, 1000
 FROM worldofrations.feedstuffs WHERE `name` = 'Mg, as Magnesium oxide (MgO)'
 );
 
+INSERT INTO temp
+(
+`id`,
+`name`,
+`searchText`,
+`cost`,
+`minimum`,
+`maximum`
+)
+(
+SELECT `id`, `name`, LOWER(`name`), 2500, 0, 1000
+FROM worldofrations.feedstuffs WHERE `name` = 'Ca and P, as Di-calcium phosphate'
+);
+
+INSERT INTO temp
+(
+`id`,
+`name`,
+`searchText`,
+`cost`,
+`minimum`,
+`maximum`
+)
+(
+SELECT `id`, `name`, LOWER(`name`), 5000, 0, 1000
+FROM worldofrations.feedstuffs WHERE `name` = 'S, as Ammonium Sulphate ((NH4)2SO4)'
+);
+
 
 SELECT 
 `id` AS `id`,
