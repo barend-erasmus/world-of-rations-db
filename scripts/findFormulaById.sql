@@ -6,17 +6,14 @@ BEGIN
 SELECT
 `formula`.`id` AS `id`,
 `formula`.`name` AS `name`,
-`formulaGroup1`.`id` AS `groupId`,
-CASE
-	WHEN `formulaGroup3`.`name` IS NULL
-	THEN
-	CONCAT(`formulaGroup2`.`name`)
-	WHEN `formulaGroup4`.`name` IS NULL
-	THEN
-	CONCAT(`formulaGroup3`.`name` , ' - ' , `formulaGroup2`.`name`)
-	ELSE
-	CONCAT(`formulaGroup4`.`name` , ' - ' , `formulaGroup3`.`name` , ' - ' , `formulaGroup2`.`name`)
-END AS `groupName`,
+`formulaGroup1`.`id` AS `groupId1`,
+`formulaGroup1`.`name` AS `groupName1`,
+`formulaGroup2`.`id` AS `groupId2`,
+`formulaGroup2`.`name` AS `groupName2`,
+`formulaGroup3`.`id` AS `groupId3`,
+`formulaGroup3`.`name` AS `groupName3`,
+`formulaGroup4`.`id` AS `groupId4`,
+`formulaGroup4`.`name` AS `groupName4`,
 `comparisonFormulas`.`formulaId` AS `comparisonFormulaId`
 FROM worldofrations.formulas AS `formula`
 INNER JOIN worldofrations.formulaGroups AS `formulaGroup1`
