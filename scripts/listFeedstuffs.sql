@@ -7,14 +7,14 @@ SELECT
 `feedstuff`.`name` AS `name`,
 `feedstuffGroup1`.`id` AS `groupId`,
 CASE
+	WHEN `feedstuffGroup2`.`name` IS NULL
+	THEN
+	CONCAT(`feedstuffGroup1`.`name`)
 	WHEN `feedstuffGroup3`.`name` IS NULL
 	THEN
-	CONCAT(`feedstuffGroup2`.`name`)
-	WHEN `feedstuffGroup4`.`name` IS NULL
-	THEN
-	CONCAT(`feedstuffGroup3`.`name` , ' - ' , `feedstuffGroup2`.`name`)
+	CONCAT(`feedstuffGroup2`.`name` , ' - ' , `feedstuffGroup1`.`name`)
 	ELSE
-	CONCAT(`feedstuffGroup4`.`name` , ' - ' , `feedstuffGroup3`.`name` , ' - ' , `feedstuffGroup2`.`name`)
+	CONCAT(`feedstuffGroup3`.`name` , ' - ' , `feedstuffGroup2`.`name` , ' - ' , `feedstuffGroup1`.`name`)
 END AS `groupName`
 FROM worldofrations.feedstuffs AS `feedstuff`
 INNER JOIN worldofrations.feedstuffGroups AS `feedstuffGroup1`
